@@ -18,7 +18,7 @@
 </nav>
 <div class="container-fluid">
     @section('put-something-inside')
-        <div>媽</div>
+        <div></div>
     @show
     @yield('content')
 </div>

@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.appTest')
 @section('title', 'CRUD首頁')
 @section('put-something-inside')
     <div>我在這</div>
