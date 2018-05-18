@@ -22,7 +22,8 @@
          */
         public function index()
         {
-            // return view('crud.index');
+            $posts = $this->CRUDRepo->index();
+            return view('crud.index', ['posts' => $posts]);
         }
         
         /**
@@ -56,7 +57,8 @@
          */
         public function show($id)
         {
-            //
+            $post = $this->CRUDRepo->find($id);
+            return view('crud.show', ['post' => $post]);
         }
         
         /**
@@ -67,7 +69,8 @@
          */
         public function edit($id)
         {
-            //
+            $post = $this->CRUDRepo->find($id);
+            return view('crud.edit', ['post' => $post]);
         }
         
         /**
@@ -79,7 +82,12 @@
          */
         public function update(Request $request, $id)
         {
-            //
+            $data = $request->only('title', 'content');
+            $post = $this->CRUDRepo->update($id, $data);
+            if ($post) {
+                return redirect()->route('crud.show', $id);
+            }
+            return redirect()->route('crud.index');
         }
         
         /**

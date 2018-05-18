@@ -16,4 +16,23 @@
         {
             return CRUD::create($data);
         }
+
+        public function find($id)
+        {
+            return CRUD::find($id);
+        }
+
+        public function index()
+        {
+            return CRUD::get();
+        }
+
+        public function update($id, $data)
+        {
+            $post =  CRUD::find($id);
+            if (!$post) {
+                return false;
+            }
+            return $post->update($data);
+        }
     }

@@ -1,6 +1,8 @@
 @extends('layouts.CRUD')
 @section('title', '新增')
 @section('content')
+    <a class="btn btn-success" href="{{ route('crud.index') }}">返回</a>
+    <br/>
     <form action="{{ route('crud.store') }}" method="post">
         {{ csrf_field() }}
         <div class="form-group">

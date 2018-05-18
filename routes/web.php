@@ -11,8 +11,12 @@
 |
 */
 
+    // Route::get('/', function () {
+    //     return view('welcome');
+    // });
+
     Route::get('/', function () {
-        return view('welcome');
+        return redirect()->route('crud.index');
     });
 /*
     Route::get('/test-crud', function () {
