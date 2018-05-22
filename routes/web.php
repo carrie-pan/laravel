@@ -14,13 +14,17 @@
     // Route::get('/', function () {
     //     return view('welcome');
     // });
-
+/*
     Route::get('/', function () {
         return redirect()->route('crud.index');
     });
-/*
+
     Route::get('/test-crud', function () {
         return view('crud');
     });
 */
     Route::resource('crud', 'Web\CRUDController');
+
+    Route::get('{path?}', function () {
+        return view('index');
+    })->where('path', '(.*)');

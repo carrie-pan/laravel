@@ -36,7 +36,7 @@ class CRUDController extends Controller
     {
         $data = $request->only('title', 'content');
         $post = $this->CRUDRepo->create($data);
-        return response()->json(['status' => 'success']);
+        return response()->json(['status' => 'success', 'post' => $post]);
     }
 
     /**
