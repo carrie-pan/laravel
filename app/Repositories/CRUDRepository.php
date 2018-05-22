@@ -35,4 +35,10 @@
             }
             return $post->update($data);
         }
+
+        public function delete($id)
+        {
+            $post = CRUD::find($id);
+            return $post ? $post->delete() : false;
+        }
     }

@@ -98,6 +98,7 @@
          */
         public function destroy($id)
         {
-            //
+            $result = $this->CRUDRepo->delete($id);
+            return redirect()->route('crud.index');
         }
     }
