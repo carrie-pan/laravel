@@ -14,6 +14,17 @@
         {
             $this->CRUDRepo = $CRUDRepo;
         }
+
+        /**
+         * Check Login Page
+         *
+         * @return \Illuminate\Http\Response
+         */
+        public function home()
+        {
+            return view('crud.home');
+        }
+        
         
         /**
          * Display a listing of the resource.

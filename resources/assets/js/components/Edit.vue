@@ -5,7 +5,7 @@
       <input type="text" class="form-control" v-model="title">
     </div>
     <div class="form-group">
-      <label for="content">內容</label>    
+      <label for="content">內容</label>
       <textarea class="form-control" name="content" cols="30" rows="10" v-model="content"></textarea>
     </div>
     <router-link class="btn btn-default" :to="`/${post.id}`">返回</router-link>

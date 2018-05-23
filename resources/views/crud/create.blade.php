@@ -6,7 +6,7 @@
     <form action="{{ route('crud.store') }}" method="post">
         {{ csrf_field() }}
         <div class="form-group">
-            <label for="title">標題</label>
+            <label for="title">標題123</label>
             <input type="text" class="form-control" name="title">
         </div>
         <div class="form-group">

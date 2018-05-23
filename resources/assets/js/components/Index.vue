@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+    <!--<router-link class="btn btn-default" to="/home">登入</router-link>-->
     <router-link class="btn btn-primary" to="/create">新增</router-link>
     <table class="table table-hover">
       <thead>
